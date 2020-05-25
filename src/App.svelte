@@ -3,7 +3,7 @@
 
 import { onMount } from 'svelte';
 
-const apiURL = "http://www.fruityvice.com/api/fruit/all";
+const apiURL = `https://www.fruityvice.com/api/fruit/all`;
 let data = [];
 
 	onMount(async function() {
