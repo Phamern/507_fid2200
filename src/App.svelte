@@ -1,22 +1,26 @@
-
 <script>
+import { Router, Link, Route } from 'svelte-routing'
+import { db, auth, googleProvider } from './components/firebase.js'
+import { authState } from 'rxfire/auth';
+import Profile from './components/Profile.svelte'
+import Login from './components/Login.svelte'
+import Fruits from './components/Fruits.svelte'
+import LandingPage from './components/LandingPage.svelte'
 
-import { onMount } from 'svelte';
-
-const apiURL = `https://www.fruityvice.com/api/fruit/all`;
-let data = [];
-
-	onMount(async function() {
-		const response = await fetch(apiURL);
-		data = await response.json();
-	});
+export let url = '';
 
 </script>
 
-<div>
-{#each data as item}
-	<div>
-		<p>{item.genus}</p>
-	</div>
-	{/each}
-</div>
+
+<Router url="{url}">
+  <nav>
+    <Link to="/">Home</Link>
+    <Link to="fruits">Fruits</Link>
+    <Link to="login">Login</Link>
+  </nav>
+  <div>
+    <Route path="/"><LandingPage /></Route>
+    <Route path="/login" component={Login}/>
+    <Route path="fruits" component="{Fruits}"/>
+  </div>
+</Router>
