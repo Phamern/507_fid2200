@@ -2,6 +2,13 @@
   import { Link } from 'svelte-routing'
   import Fruits from './Fruits.svelte'
   import Login from './Login.svelte'
+  import BurgerMenu from './BurgerMenu.svelte'
+
+  let show = false
+
+  const showBurger = () => {
+    show = !show
+  }
 
 </script>
 
@@ -12,6 +19,11 @@
     <Link to="fruits"><p class='header-item'>Fruits</p></Link>
   </div>
   <Link to="login"><p class='header-item'></p></Link>
+  <button class='hamburger' on:click={showBurger}>X</button>
+    {#if show}
+      <BurgerMenu />
+    {/if}
+
 </header>
 
 <style>
@@ -40,7 +52,31 @@
     font-family: 'poppins', sans-serif;
     font-size: 1rem;
     color: #fff;
-    mix-blend-mode: difference;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .hamburger {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      right: 5vw;
+      text-decoration: none;
+      width: 2rem;
+      background-color: transparent;
+      border: none;
+    }
+    .header-mid-items {
+      display: none;
+  }
+
   }
 
 </style>

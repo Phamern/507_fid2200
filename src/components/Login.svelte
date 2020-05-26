@@ -10,16 +10,22 @@ export let user;
 const unsubscribe = authState(auth).subscribe(u => user = u);
 
 
-function login() {
+const login = () => {
 	auth.signInWithPopup(googleProvider);
 }
+
+const logout = () => {
+	auth.signOut()
+}
+
+
 
 </script>
 
 <main>
 	{#if user}
 		<Profile {...user} />
-		<button on:click={ () => auth.signOut()}>Logout</button>
+		<button on:click={logout}>Logout</button>
 	{:else}
 		<button on:click={login}>Sign in</button>
 	{/if}

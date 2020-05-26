@@ -13,14 +13,13 @@ db.collection('citrus').orderBy('pos', 'asc').onSnapshot(snapData => {
 
 </script>
   <main class='landingpage-grid'>
-  <!-- {#each list as item}
+  {#each list as item}
     <Lemon id={item.id} fruitInfo={item.data()} />
     <Orange id={item.id} fruitInfo={item.data()} />
   {:else}
     <div>loading...</div>
-  {/each} -->
+  {/each}
   </main>
-
 <style>
 
   .landingpage-grid {
@@ -30,5 +29,4 @@ db.collection('citrus').orderBy('pos', 'asc').onSnapshot(snapData => {
     height: 100vh;
     width: 100vw;
   }
-
 </style>

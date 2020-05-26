@@ -11,6 +11,12 @@ import Header from './components/Header.svelte'
 
 export let url = '';
 
+export let signedIn = false;
+
+const loggedIn = (user) => {
+	signedIn = !signedIn
+}
+
 </script>
 <svelte:head>
 	<!--Fonts-->
