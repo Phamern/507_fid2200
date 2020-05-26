@@ -8,6 +8,8 @@ db.collection('citrus').orderBy('pos', 'asc').onSnapshot(snapData => {
 	arrList = snapData.docs
 })
 
+
+
 function addItem() {
 	let date = new Date()
 	db.collection('citrus').add({name: newItemText, pos: date.getTime()})
@@ -16,8 +18,10 @@ function addItem() {
 function deleteItem(itemId) {
 	db.collection('citrus').doc(itemId).delete();
 }
-</script>
 
+
+</script>
+<main>
 <h1>List</h1>
 Add Item:
 <input type='text' bind:value={newItemText}/>
@@ -25,3 +29,12 @@ Add Item:
 {#each arrList as listItem}
 	<p>{listItem.data().name}<button on:click={() => deleteItem(listItem.id)}>delte</button></p>
 {/each}
+</main>
+
+
+<style>
+
+main {
+	margin-top: 100px;
+}
+</style>

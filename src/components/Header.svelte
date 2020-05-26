@@ -11,7 +11,7 @@
     <Link to="/"><p class='header-item'>Home</p></Link>
     <Link to="fruits"><p class='header-item'>Fruits</p></Link>
   </div>
-  <Link to="login"><p class='header-item'>Login</p></Link>
+  <Link to="login"><p class='header-item'></p></Link>
 </header>
 
 <style>
@@ -37,6 +37,8 @@
   }
 
   .header-item {
+    font-family: 'poppins', sans-serif;
+    font-size: 1rem;
     color: #fff;
     mix-blend-mode: difference;
   }

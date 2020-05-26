@@ -4,18 +4,12 @@
     export let uid;
 </script>
 
-
-<!-- {#if user}
-	<button on:click={ () => auth.signOut()}>Logout</button>
-{:else}
-	<button on:click={login}>Sign in</button>
-{/if} -->
-
 <h3>Hi { displayName }!</h3>
-
-<img src={ photoURL } width="100" alt="user avatar">
+<img class='profile-image' src={ photoURL } width="100" alt="profile avatar">
 <p>Your userID is { uid }</p>
 
 <style>
-
+    .profile-image {
+        border-radius: 50%;
+    }
 </style>

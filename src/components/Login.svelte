@@ -3,7 +3,7 @@
 import {auth, googleProvider} from './firebase.js'
 import { authState } from 'rxfire/auth'
 import Profile from './Profile.svelte'
-// import Todos from '.Todos.svelte'
+import Header from './Header.svelte'
 
 export let user;
 
@@ -29,7 +29,11 @@ function login() {
 
 main {
 	padding-top: 75px;
-	background-color: #fff;
+	background-color: #fff44f;
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	height: 100vh;
 }
 
 </style>
