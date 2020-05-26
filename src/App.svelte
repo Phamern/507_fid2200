@@ -5,22 +5,34 @@ import { authState } from 'rxfire/auth';
 import Profile from './components/Profile.svelte'
 import Login from './components/Login.svelte'
 import Fruits from './components/Fruits.svelte'
+import Lemon from './components/Lemon.svelte'
 import LandingPage from './components/LandingPage.svelte'
+import Header from './components/Header.svelte'
 
 export let url = '';
 
 </script>
-
-
+<svelte:head>
+	<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/iiy6nab.css">
+	
+</svelte:head>
 <Router url="{url}">
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="fruits">Fruits</Link>
-    <Link to="login">Login</Link>
-  </nav>
+		<Header />
   <div>
     <Route path="/"><LandingPage /></Route>
-    <Route path="/login" component={Login}/>
+    <Route path="login" component={Login}/>
     <Route path="fruits" component="{Fruits}"/>
+    <Route path="lemon" component="{Lemon}"/>
   </div>
 </Router>
+
+<style>
+
+:global(html, body, h1) {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+</style>

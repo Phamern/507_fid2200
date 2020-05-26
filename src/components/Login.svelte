@@ -16,12 +16,20 @@ function login() {
 
 </script>
 
+<main>
+	{#if user}
+		<Profile {...user} />
+		<button on:click={ () => auth.signOut()}>Logout</button>
+	{:else}
+		<button on:click={login}>Sign in</button>
+	{/if}
+</main>
 
-{#if user}
-	<Profile {...user} />
-	<button on:click={ () => auth.signOut()}>Logout</button>
-	<hr>
-	<!-- <Todos uid={user.uid} /> -->
-{:else}
-	<button on:click={login}>Sign in</button>
-{/if}
+<style>
+
+main {
+	padding-top: 75px;
+	background-color: #fff;
+}
+
+</style>
