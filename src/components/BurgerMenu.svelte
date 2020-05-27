@@ -1,9 +1,10 @@
 <script>
   import { Link } from 'svelte-routing'
 
-let show = false
+  let show = false
 
 </script>
+
 <nav class='fullscreen'>
   <h1>Squeeze</h1>
   <Link on:click={!show} to="/"><p class='header-item'>Home</p></Link>

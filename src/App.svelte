@@ -35,10 +35,25 @@ const loggedIn = (user) => {
 
 <style>
 
-:global(html, body, h1) {
+:global(html, body) {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'poppins', sans-serif;
+}
+
+:global(h1) {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'flood-std', sans-serif;
+	font-weight: 100;
+}
+
+:global(a, a:hover, a:visited) {
+	font-family: 'flood-std', sans-serif;
+	color: #fff;
+	text-decoration: none;
 }
 
 </style>

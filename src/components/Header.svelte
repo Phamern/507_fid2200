@@ -1,5 +1,6 @@
 <script>
   import { Link } from 'svelte-routing'
+  import { fade } from 'svelte/transition'
   import Fruits from './Fruits.svelte'
   import Login from './Login.svelte'
   import BurgerMenu from './BurgerMenu.svelte'
@@ -19,7 +20,11 @@
     <Link to="fruits"><p class='header-item'>Fruits</p></Link>
   </div>
   <Link to="login"><p class='header-item'></p></Link>
-  <button class='hamburger' on:click={showBurger}>X</button>
+  <button class='hamburger' on:click={showBurger}>
+    <div class='hamburger-icon'>I</div>
+    <div class='hamburger-icon'>I</div>
+    <div class='hamburger-icon'>I</div>
+  </button>
     {#if show}
       <BurgerMenu />
     {/if}
@@ -36,6 +41,7 @@
     background-color: none;
     position: fixed;
     place-items: center;
+    z-index: 1000;
   }
 
   h1 {
@@ -72,10 +78,22 @@
       width: 2rem;
       background-color: transparent;
       border: none;
+      user-select: none;
     }
+    
+    .hamburger-icon {
+      font-family: 'flood-std', sans-serif;
+      font-size: 2rem;
+      display: grid;
+      grid-template-rows: repeat(3, 0.2rem);
+      user-select: none;
+      transform: rotate(70deg);
+    }
+
     .header-mid-items {
       display: none;
-  }
+    }
+
 
   }
 
