@@ -110,15 +110,16 @@ p {
     align-items: center;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     width: 80vw;
     padding: 2rem;
+    letter-spacing: 1rem;
   }
   .sticky {
-  position: absolute;
-  margin: 1rem;
-  padding-top: 10vh;
-}
+    position: absolute;
+    margin: 1rem;
+    padding-top: 10vh;
+  }
 }
 
 </style>

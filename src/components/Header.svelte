@@ -23,11 +23,11 @@
     <Link to="earth"><p class='header-item'>Earth</p></Link>
   </div>
   <Link to="login"><p class='header-item'></p></Link>
-  <button class='hamburger' on:click={showBurger}>
-    <div class='hamburger-icon'>I</div>
-    <div class='hamburger-icon'>I</div>
-    <div class='hamburger-icon'>I</div>
-  </button>
+  <div class='hamburger' on:click={showBurger}>
+      <div class='hamburger-icon'></div>
+      <div class='hamburger-icon'></div>
+      <div class='hamburger-icon'></div>
+  </div>
     {#if show}
       <BurgerMenu />
     {/if}
@@ -63,6 +63,7 @@
     font-family: 'poppins', sans-serif;
     font-size: 1rem;
     color: black;
+    text-align: center;
   }
 
   .hamburger {
@@ -75,24 +76,18 @@
     }
 
     .hamburger {
-      display: block;
       z-index: 1;
+      display: grid;
+      grid-template-rows: repeat(3, 5px);
+      height: 30px;
       position: absolute;
-      right: 5vw;
-      text-decoration: none;
-      width: 2rem;
-      background-color: transparent;
-      border: none;
-      user-select: none;
+      gap: 4px;
     }
     
     .hamburger-icon {
-      font-family: 'flood-std', sans-serif;
-      font-size: 2rem;
-      display: grid;
-      grid-template-rows: repeat(3, 0.2rem);
-      user-select: none;
-      transform: rotate(70deg);
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
     }
 
     .header-mid-items {
