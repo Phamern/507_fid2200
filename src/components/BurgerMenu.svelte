@@ -7,8 +7,13 @@
 
 <nav class='fullscreen'>
   <h1>Squeeze</h1>
-  <Link on:click={!show} to="/"><p class='header-item'>Home</p></Link>
-  <Link on:click={!show} to="fruits"><p class='header-item'>Fruits</p></Link>
+  <div class='links'>
+    <Link on:click={!show} to="/"><p class='header-item'>Home</p></Link>
+    <Link on:click={!show} to="fire"><p class='header-item'>Fire</p></Link>
+    <Link on:click={!show} to="water"><p class='header-item'>Water</p></Link>
+    <Link on:click={!show} to="air"><p class='header-item'>Air</p></Link>
+    <Link on:click={!show} to="earth"><p class='header-item'>Earth</p></Link>
+  </div>
 </nav>
 
 <style>
@@ -19,10 +24,10 @@
     top: 0;
     position: absolute;
     display: grid;
-    place-items: center;
+    justify-content: center;
     grid-template-rows: repeat(3, 100px);
     background-color: #1d1d1d;
-    padding: 5rem;
+    gap: 1rem;
   }
 
 
@@ -33,9 +38,15 @@
     margin-top: 3rem;
   }
 
+  .links {
+   display: grid;
+   justify-content: center;
+  }
+
   .header-item {
     font-size: 1.2rem;
     color: #fff;
+    text-align: center;
   }
 
 </style>

@@ -17,7 +17,6 @@
   <h1>elements</h1>
   <div class='header-mid-items'>
     <Link to="/"><p class='header-item'>Home</p></Link>
-    <Link to="fruits"><p class='header-item'>Fruits</p></Link>
     <Link to="fire"><p class='header-item'>Fire</p></Link>
     <Link to="water"><p class='header-item'>Water</p></Link>
     <Link to="air"><p class='header-item'>Air</p></Link>
@@ -57,7 +56,7 @@
 
   .header-mid-items {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(5, 5rem);
   }
 
   .header-item {
