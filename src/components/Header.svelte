@@ -14,10 +14,14 @@
 </script>
 
 <header>
-  <h1>Squeeze</h1>
+  <h1>4Elem</h1>
   <div class='header-mid-items'>
     <Link to="/"><p class='header-item'>Home</p></Link>
     <Link to="fruits"><p class='header-item'>Fruits</p></Link>
+    <Link to="fire"><p class='header-item'>Fire</p></Link>
+    <Link to="water"><p class='header-item'>Water</p></Link>
+    <Link to="air"><p class='header-item'>Air</p></Link>
+    <Link to="earth"><p class='header-item'>Earth</p></Link>
   </div>
   <Link to="login"><p class='header-item'></p></Link>
   <button class='hamburger' on:click={showBurger}>
@@ -57,7 +61,7 @@
   .header-item {
     font-family: 'poppins', sans-serif;
     font-size: 1rem;
-    color: #fff;
+    color: black;
   }
 
   .hamburger {
