@@ -84,4 +84,24 @@ p {
   font-size: 2rem;
 }
 
+@media (max-width: 900px) {
+
+  .videoframe {
+    place-items: start;
+    justify-content: left;
+    align-items: center;
+  }
+  h2 {
+    font-size: 4rem;
+    width: 80vw;
+    padding: 2rem;
+    letter-spacing: 1rem;
+  }
+  .sticky {
+    position: absolute;
+    margin: 1rem;
+    padding-top: 10vh;
+  }
+}
+
 </style>

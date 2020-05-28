@@ -39,10 +39,9 @@
     grid-template-columns: repeat(3, 1fr);
     width: 100vw;
     height: 75px;
-    background-color: none;
     position: fixed;
     place-items: center;
-    z-index: 1000;
+    z-index: 1;
   }
 
   h1 {
@@ -60,8 +59,9 @@
   .header-item {
     font-family: 'poppins', sans-serif;
     font-size: 1rem;
-    color: black;
+    color: #1d1a1a;
     text-align: center;
+    mix-blend-mode: difference;
   }
 
   .hamburger {

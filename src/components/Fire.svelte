@@ -7,7 +7,7 @@
 
 {#if type === 'fire'}
   {#each $Store.fire as fact}
-    <Elements fact={fact}/>
+    <Elements fact={fact} />
   {/each}
 {/if}
 
