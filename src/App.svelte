@@ -4,7 +4,6 @@ import { db, auth, googleProvider } from './components/firebase.js'
 import { authState } from 'rxfire/auth';
 import Profile from './components/Profile.svelte'
 import Login from './components/Login.svelte'
-import Fruits from './components/Fruits.svelte'
 import Fire from './components/Fire.svelte'
 import Water from './components/Water.svelte'
 import Air from './components/Air.svelte'
@@ -32,9 +31,8 @@ const loggedIn = (user) => {
   <div>
     <Route path="/"><LandingPage /></Route>
     <Route path="login" component={Login}/>
-    <Route path="fruits" component="{Fruits}"/>
-    <Route path="fire" component="{Fire}"/>
-    <Route path="water" component="{Water}"/>
+    <Route path="fire" component="{Fire}" type='fire' />
+    <Route path="water" component="{Water}" type='water'/>
     <Route path="air" component="{Air}"/>
     <Route path="earth" component="{Earth}"/>
   </div>

@@ -1,10 +1,14 @@
 <script>
 import { db } from './firebase.js'
 import { fly, fade } from 'svelte/transition'
+import Store from './Store.js'
+import Elements from './Elements.svelte'
 
 let waterVideo = './water.mp4'
 
 let list = [];
+
+export let type;
 
 db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
   list = snapData.docs
@@ -12,17 +16,23 @@ db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
 
 </script>
 
+{#if type === 'water'}
+  {#each $Store.water as fact}
+    <Elements fact={fact}/>
+  {/each}
+{/if}
+
 {#each list as item}
  {#if item.data().pos === 3}
 <body in:fade={{y: 200, duration: 500}}>
   <main>
    <div class='videoframe'>
-    <video
-      src={waterVideo}
-      playsinline
-      autoplay
-      loop 
-    />
+      <video
+        src={waterVideo}
+        playsinline
+        autoplay
+        loop 
+      />
     <div class='sticky'>
       <h2 in:fade={{y: 200, duration: 3000, delay: 500}}>{item.data().name}</h2>
     </div>
@@ -55,15 +65,17 @@ main {
 
 .videoframe {
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   scroll-snap-align: start;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 video {
-  min-width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .sticky {

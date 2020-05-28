@@ -3,7 +3,6 @@ import { db } from './firebase'
 import { Link, Route } from 'svelte-routing'
 import Header from './Header.svelte'
 import Fire from './Fire.svelte'
-import Orange from './Orange.svelte'
 import {fade} from 'svelte/transition'
 
 // let video = './water_video.mp4'

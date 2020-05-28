@@ -1,7 +1,6 @@
 <script>
   import { Link } from 'svelte-routing'
   import { fade } from 'svelte/transition'
-  import Fruits from './Fruits.svelte'
   import Login from './Login.svelte'
   import BurgerMenu from './BurgerMenu.svelte'
 
@@ -14,9 +13,8 @@
 </script>
 
 <header>
-  <h1>elements</h1>
+  <Link to="/"><h1>elements</h1></Link>
   <div class='header-mid-items'>
-    <Link to="/"><p class='header-item'>Home</p></Link>
     <Link to="fire"><p class='header-item'>Fire</p></Link>
     <Link to="water"><p class='header-item'>Water</p></Link>
     <Link to="air"><p class='header-item'>Air</p></Link>
@@ -50,7 +48,7 @@
   h1 {
     font-family: 'Cormorant Garamond', serif;
     letter-spacing: 1rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color:#fff; 
   }
 
@@ -81,6 +79,7 @@
       grid-template-rows: repeat(3, 5px);
       height: 30px;
       position: absolute;
+      right: 5rem;
       gap: 4px;
     }
     

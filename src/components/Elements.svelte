@@ -1,42 +1,29 @@
 <script>
-import { db } from './firebase.js'
-import { fly, fade } from 'svelte/transition'
-
-let fireVideo = './wind.mp4'
-
-let list = [];
-
-db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
-  list = snapData.docs
-})
-
+import { fade } from 'svelte/transition'
+ export let fact;
 </script>
 
-{#each list as item}
- {#if item.data().pos === 2}
-<body in:fade={{y: 200, duration: 500}}>
+  <body in:fade={{y: 200, duration: 500}}>
   <main>
    <div class='videoframe'>
     <video
-      src={fireVideo}
+      src={fact.video}
       playsinline
       autoplay
       loop 
     />
     <div class='sticky'>
-      <h2 in:fade={{y: 200, duration: 3000, delay: 500}}>{item.data().name}</h2>
+      <h2 in:fade={{y: 200, duration: 3000, delay: 500}}>{fact.name}</h2>
     </div>
   </div>
     <div class='videoframe'>
         <section class='element-information'>
-          <img class='fire' src='{item.data().img}' alt="fire">
-          <p>{item.data().description}</p>
+          <!-- <img class='fire' src='{item.data().icon}' alt="fire"> -->
+          <p>{fact.description}</p>
         </section>
     </div>
   </main>
 </body>
-{/if}
-{/each}
 <style>
 
 body {
@@ -88,12 +75,6 @@ h2 {
   gap: 2rem;
 }
 
-.fire {
-  width: 50vw;
-  object-fit: cover;
-  object-position: 20% 10px; 
-}
-
 p {
   margin: 0;
   padding: 0;
@@ -104,4 +85,3 @@ p {
 }
 
 </style>
-

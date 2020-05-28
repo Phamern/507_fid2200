@@ -59,11 +59,12 @@ main {
   scroll-snap-align: start;
   place-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 video {
-  min-width: 100vw;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .sticky {
