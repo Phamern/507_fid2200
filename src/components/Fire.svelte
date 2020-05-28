@@ -19,6 +19,7 @@ db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
    <div class='videoframe'>
     <video
       src={fireVideo}
+      playsinline
       autoplay
       loop 
     />
