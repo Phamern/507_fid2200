@@ -14,7 +14,7 @@
 </script>
 
 <header>
-  <h1>4Elem</h1>
+  <h1>elements</h1>
   <div class='header-mid-items'>
     <Link to="/"><p class='header-item'>Home</p></Link>
     <Link to="fruits"><p class='header-item'>Fruits</p></Link>
@@ -49,8 +49,10 @@
   }
 
   h1 {
-    font-family: 'flood-std', sans-serif;
-    color:white; 
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 1rem;
+    font-size: 1rem;
+    color:#fff; 
   }
 
   .header-mid-items {

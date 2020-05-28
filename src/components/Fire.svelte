@@ -14,7 +14,7 @@ db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
 
 {#each list as item}
  {#if item.data().pos === 1}
-  <body in:fade={{y: 200, duration: 2000}}>
+  <body in:fade={{y: 200, duration: 500}}>
   <main>
    <div class='videoframe'>
     <video
@@ -23,7 +23,7 @@ db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
       loop 
     />
     <div class='sticky'>
-      <h2 in:fade={{y: 200, duration: 5000}}>{item.data().name}</h2>
+      <h2 in:fade={{y: 200, duration: 3000, delay: 500}}>{item.data().name}</h2>
     </div>
   </div>
     <div class='videoframe'>
