@@ -2,7 +2,7 @@
 import { db } from './firebase.js'
 import { fly, fade } from 'svelte/transition'
 
-let fireVideo = './earth_video.mp4'
+let fireVideo = './earth.mp4'
 
 let list = [];
 
@@ -23,7 +23,7 @@ db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
       loop 
     />
     <div class='sticky'>
-      <h2 transition:fade={{y: 200, duration: 5000}}>{item.data().name}</h2>
+      <h2 in:fade={{y: 200, duration: 5000}}>{item.data().name}</h2>
     </div>
   </div>
     <div class='videoframe'>
