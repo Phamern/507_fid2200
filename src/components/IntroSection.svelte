@@ -39,7 +39,7 @@ export let fact;
     padding-left: 5rem;
     color: #fff;
     font-family: 'Cormorant Garamond', serif;
-    width: 600px;
+    width: 650px;
     font-size: 2rem;
   }
 
