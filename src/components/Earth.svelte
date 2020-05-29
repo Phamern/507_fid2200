@@ -1,12 +1,11 @@
 <script>
   import Store from './Store.js'
   import Elements from './Elements.svelte'
-  import {fade} from 'svelte/transition'
 
   export let type;
 </script>
 
-<body in:fade={{y: 200, duration: 500}}>
+<body>
 {#if type === 'earth'}
   {#each $Store.earth as fact}
     {#each fact.cors as cor}
