@@ -47,7 +47,8 @@ export let fact;
 
   @media (max-width: 900px) {
     .element-information {
-      padding: 5rem;
+      padding: 3rem;
+      margin-top: 5vh;
   }
 
     .title {
