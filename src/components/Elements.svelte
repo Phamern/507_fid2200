@@ -20,6 +20,7 @@
 .scroll-snap-container {
   display: grid;
   height: 100vh;
+  width: 100vw;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
@@ -47,5 +48,22 @@
   }
 
 } */
+
+  @media (max-width: 360px){
+  .scroll-snap-container {
+    scroll-snap-type: none;
+    overflow-y: auto;
+  }
+
+  .snap-scroll-section {
+    scroll-snap-align: none;
+  }
+
+  .hero-section {
+    place-items: center;
+    overflow: auto;
+  }
+    
+  }
 
 </style>

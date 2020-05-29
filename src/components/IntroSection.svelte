@@ -15,16 +15,14 @@ export let fact;
   .element-information {
     display: grid;
     grid-template-columns:  1fr, 1fr, 30vw;
-    grid-template-rows: repeat(3, 1fr);
     padding: 5rem;
-    margin-top: 15vh;
+    padding-top: 15vh;
     max-width: 100vw;
     gap: 2rem;
   }
 
   .title {
     grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
     font-size: 5rem;
     font-family: 'Cormorant Garamond', serif;
     font-family: 'Inknut Antiqua', serif;
@@ -45,18 +43,18 @@ export let fact;
     font-size: 2rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 760px) {
     .element-information {
       padding: 3rem;
       margin-top: 5vh;
   }
 
     .title {
-      font-size: 3rem;
+      font-size: 2.5rem;
       width: 80vw;
       padding: 0;
       letter-spacing: 1rem;
-      line-height: 4rem;
+      line-height: 3.5rem;
     }
     .description {
       grid-column: 2 / span 3;
@@ -64,7 +62,7 @@ export let fact;
       padding-left: 0;
       color: #fff;
       font-family: 'Cormorant Garamond', serif;
-      width: 70vw;
+      width: 80vw;
       font-size: 1.5rem;
     }
   }
