@@ -5,28 +5,22 @@ import Header from './Header.svelte'
 import Fire from './Fire.svelte'
 import {fade} from 'svelte/transition'
 
-// let video = './water_video.mp4'
-let volume 
-
 let list = [];
 
 db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
   list = snapData.docs
 })
-
+let y;
 </script>
+<svelte:window bind:scrollY={y}/>
 <body>
   <h1 class='test' in:fade={{y:300, duration: 2000, delay: 2000}}>The water element</h1>
-  <div class='videoframe'>
-    <!-- <Link to='fire'>
-      <video
-      in:fade={{y:300, duration: 2000, delay: 500}}
-      src={video}
-      autoplay
-      loop
-      ></video>
-   </Link> -->
-  </div>
+  {#if y >= 200 && y <= 700}
+    <div class='videoframe'>
+    <p transition:fade={{y: 300, duration: 3000}}>Each of these creative elements are necessary for human life, the each have both positive and negative aspects The Earth without Water to moisten it, without Fire to warm it, and without Air to surround it, would be a lifeless planet. The elements work in harmony, even though at times their contrary aspects may seem in conflict with each other, to create and to sustain life. The elements exist in a physical form, such as a handful of soil, and in an un-manifested, non-physical form or energy. All the elements emerge from Akasha, the source of all energy.</p>
+    </div>
+  {/if}
+  <p>{y}</p>
 </body>
 <style>
 body {
@@ -36,14 +30,9 @@ body {
   min-height: 100vh;
   place-items: center;
   position: relative;
+  background-color: #1d1a1a;
 }
-.test {
-  position: absolute;
-  top: 30vh;
-  font-size: 5rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  letter-spacing: 2rem;
+p {
   color: white;
 }
 .videoframe {

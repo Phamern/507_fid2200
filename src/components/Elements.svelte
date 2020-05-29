@@ -1,100 +1,51 @@
 <script>
-import { fade } from 'svelte/transition'
-export let fact;
+  import { fade } from 'svelte/transition'
+  import IntroSection from './IntroSection.svelte'
+  import HeroSection from './HeroSection.svelte'
+  export let fact;
+  export let cor;
 </script>
 
-  <main>
-   <div class='videoframe'>
-    <video
-      src={fact.video}
-      playsinline
-      autoplay
-      loop 
-    />
-    <div class='sticky'>
-      <h2 in:fade={{y: 200, duration: 3000, delay: 500}}>{fact.name}</h2>
-    </div>
-  </div>
-    <div class='videoframe'>
-        <section class='element-information'>
-          <p>{fact.description}</p>
-          <p>Direction: {fact.direction}</p>
-        </section>
-    </div>
+  <main class='scroll-snap-container'>
+    <section class='snap-scroll-section hero-section'>
+      <HeroSection fact={fact} />
+    </section>
+    <section class='snap-scroll-section'>
+      <IntroSection cor={cor} fact={fact}/>
+    </section>
   </main>
+
 <style>
 
-
-
-main {
+.scroll-snap-container {
   display: grid;
+  height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
-.videoframe {
+.snap-scroll-section {
   display: grid;
   min-height: 100vh;
   scroll-snap-align: start;
-  place-items: center;
+  /* place-items: center; */
   position: relative;
+}
+
+.hero-section {
+  place-items: center;
   overflow: hidden;
 }
 
-video {
-  min-width: 100%;
-  min-height: 100%;
-}
 
-.sticky {
-  position: absolute;
-  margin: auto 0;
-  padding-top: 30vh;
-}
+/* @media (max-width: 900px) {
 
-h2 {
-  font-size: 5rem;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  letter-spacing: 2rem;
-  color: white;
-
-}
-
-.element-information {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  font-family: 'Cormorant Garamond', serif;
-  width: 500px;
-  font-size: 2rem;
-}
-
-@media (max-width: 900px) {
-
-  .videoframe {
-    place-items: start;
+  .snap-scroll-section {
+    place-items: center;
     justify-content: left;
     align-items: center;
   }
-  h2 {
-    font-size: 4rem;
-    width: 80vw;
-    padding: 2rem;
-    letter-spacing: 1rem;
-  }
-  .sticky {
-    position: absolute;
-    margin: 1rem;
-    padding-top: 10vh;
-  }
-}
+
+} */
 
 </style>

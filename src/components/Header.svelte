@@ -1,7 +1,6 @@
 <script>
   import { Link } from 'svelte-routing'
   import { fade } from 'svelte/transition'
-  import Login from './Login.svelte'
   import BurgerMenu from './BurgerMenu.svelte'
 
   let show = false
@@ -57,7 +56,7 @@
   }
 
   .header-item {
-    font-family: 'poppins', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
     color: #1d1a1a;
     text-align: center;
