@@ -19,7 +19,7 @@ export let fact;
     padding-top: 15vh;
     max-width: 100vw;
     gap: 2rem;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .title {
@@ -65,7 +65,7 @@ export let fact;
     }
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 360px) {
     .element-information {
       padding: 2rem;
       margin-top: 2vh;
