@@ -9,6 +9,7 @@
   playsinline
   autoplay
   loop 
+  muted
 />
 <div class='hero-title-container'>
   <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 500}}>{fact.name}</h1>
