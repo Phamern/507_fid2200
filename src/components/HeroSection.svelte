@@ -16,6 +16,18 @@
 
 <style>
 
+.hero-video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero-title-container {
+  display: grid;
+  width: 100vw;
+  place-items: center;
+  position: absolute;
+}
+
 .hero-title {
   font-size: 5rem;
   font-family: 'Cormorant Garamond', serif;
@@ -25,16 +37,7 @@
   color: white;
 }
 
-.hero-video {
-  min-width: 100%;
-  min-height: 100%;
-}
 
-.hero-title-container {
-  display: grid;
-  place-items: center;
-  position: absolute;
-}
 
 @media (max-width: 900px) {
 

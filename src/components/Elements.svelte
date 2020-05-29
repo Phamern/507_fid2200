@@ -27,8 +27,8 @@
 .snap-scroll-section {
   display: grid;
   min-height: 100vh;
+  width: 100vw;
   scroll-snap-align: start;
-  /* place-items: center; */
   position: relative;
 }
 

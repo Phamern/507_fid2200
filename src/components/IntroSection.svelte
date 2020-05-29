@@ -17,6 +17,7 @@ export let fact;
     grid-template-columns:  1fr, 1fr, 30vw;
     grid-template-rows: repeat(3, 1fr);
     padding: 5rem;
+    margin-top: 15vh;
     max-width: 100vw;
     gap: 2rem;
   }
@@ -45,12 +46,25 @@ export let fact;
   }
 
   @media (max-width: 900px) {
+    .element-information {
+      padding: 5rem;
+  }
 
     .title {
-      font-size: 4rem;
+      font-size: 3rem;
       width: 80vw;
-      padding: 2rem;
+      padding: 0;
       letter-spacing: 1rem;
+      line-height: 4rem;
+    }
+    .description {
+      grid-column: 2 / span 3;
+      grid-row: 2 / span 3;
+      padding-left: 0;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      width: 70vw;
+      font-size: 1.5rem;
     }
   }
 

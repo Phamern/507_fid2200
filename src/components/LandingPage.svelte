@@ -23,6 +23,7 @@ let y;
   <p>{y}</p>
 </body>
 <style>
+
 body {
   display: grid;
   overflow-x: hidden;
