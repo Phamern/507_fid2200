@@ -62,6 +62,7 @@
   .hero-section {
     place-items: center;
     overflow: auto;
+    overflow-x: hidden;
   }
     
   }

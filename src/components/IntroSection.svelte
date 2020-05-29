@@ -19,6 +19,7 @@ export let fact;
     padding-top: 15vh;
     max-width: 100vw;
     gap: 2rem;
+    overflow-x: hidden;
   }
 
   .title {
@@ -35,7 +36,6 @@ export let fact;
 
   .description {
     grid-column: 2 / span 3;
-    grid-row: 2 / span 3;
     padding-left: 5rem;
     color: #fff;
     font-family: 'Cormorant Garamond', serif;
@@ -51,19 +51,39 @@ export let fact;
 
     .title {
       font-size: 2.5rem;
-      width: 80vw;
+      width: 100%;
       padding: 0;
       letter-spacing: 1rem;
       line-height: 3.5rem;
     }
     .description {
-      grid-column: 2 / span 3;
-      grid-row: 2 / span 3;
       padding-left: 0;
       color: #fff;
       font-family: 'Cormorant Garamond', serif;
-      width: 80vw;
+      width: 100%;
       font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .element-information {
+      padding: 2rem;
+      margin-top: 2vh;
+  }
+
+    .title {
+      font-size: 2rem;
+      width: 100%;
+      padding: 0;
+      letter-spacing: 1rem;
+      line-height: 3.5rem;
+    }
+    .description {
+      padding-left: 0;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      width: 100%;
+      font-size: 1rem;
     }
   }
 

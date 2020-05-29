@@ -41,6 +41,11 @@
 
 @media (max-width: 900px) {
 
+    .hero-video {
+      min-width: 100%;
+      height: 100%;
+    }
+
   .hero-title {
     font-size: 4rem;
     letter-spacing: 1rem;
