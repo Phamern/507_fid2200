@@ -1,9 +1,8 @@
 <script>
 import { fade } from 'svelte/transition'
- export let fact;
+export let fact;
 </script>
 
-  <body in:fade={{y: 200, duration: 500}}>
   <main>
    <div class='videoframe'>
     <video
@@ -18,20 +17,14 @@ import { fade } from 'svelte/transition'
   </div>
     <div class='videoframe'>
         <section class='element-information'>
-          <!-- <img class='fire' src='{item.data().icon}' alt="fire"> -->
           <p>{fact.description}</p>
+          <p>Direction: {fact.direction}</p>
         </section>
     </div>
   </main>
-</body>
 <style>
 
-body {
-  display: grid;
-  overflow-x: hidden;
-  height: 100vh;
-  background-color: #1d1a1a;
-}
+
 
 main {
   display: grid;
