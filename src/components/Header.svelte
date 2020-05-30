@@ -58,7 +58,7 @@
   .header-item {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
-    color: #1d1a1a;
+    color: #fff;
     text-align: center;
     mix-blend-mode: difference;
   }

@@ -39,8 +39,6 @@ export let url = '';
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'flood-std', sans-serif;
-	font-weight: 100;
 }
 
 :global(a, a:hover, a:visited) {

@@ -1,106 +1,108 @@
 <script>
-import { db } from './firebase'
 import { Link, Route } from 'svelte-routing'
 import Header from './Header.svelte'
 import Fire from './Fire.svelte'
 import {fade} from 'svelte/transition'
 
-let list = [];
+let videoLife = './video/life.mp4'
 
-db.collection('elements').orderBy('pos', 'asc').onSnapshot(snapData => {
-  list = snapData.docs
-})
-let y;
 </script>
-<svelte:window bind:scrollY={y}/>
-<body>
-  <h1 class='test' in:fade={{y:300, duration: 2000, delay: 2000}}>The water element</h1>
-  {#if y >= 200 && y <= 700}
-    <div class='videoframe'>
-    <p transition:fade={{y: 300, duration: 3000}}>Each of these creative elements are necessary for human life, the each have both positive and negative aspects The Earth without Water to moisten it, without Fire to warm it, and without Air to surround it, would be a lifeless planet. The elements work in harmony, even though at times their contrary aspects may seem in conflict with each other, to create and to sustain life. The elements exist in a physical form, such as a handful of soil, and in an un-manifested, non-physical form or energy. All the elements emerge from Akasha, the source of all energy.</p>
-    </div>
-  {/if}
-  <p>{y}</p>
-</body>
+
+  <main class='scroll-snap-container'>
+    <section class='snap-scroll-section hero-section'>
+      <video
+        class='hero-video'
+        src={videoLife}
+        playsinline
+        autoplay
+        muted
+      />
+      <div class='hero-title-container'>
+        <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 500}}>Elements</h1>
+        <p class='hero-text' in:fade={{y: 200, duration: 3000, delay: 500}}>The Earth without Water to moisten it, without Fire to warm it, and without Air to surround it, would be a lifeless planet.</p>
+      </div>
+    </section>
+  </main>
+
 <style>
 
-body {
+.scroll-snap-container {
   display: grid;
-  overflow-x: hidden;
-  grid-template-rows: repeat(4, 100vh);
-  min-height: 100vh;
-  place-items: center;
-  position: relative;
-  background-color: #1d1a1a;
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
-p {
+
+.snap-scroll-section {
+  display: grid;
+  min-height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.hero-section {
+  place-items: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.9;
+}
+
+.hero-title-container {
+  display: grid;
+  width: 100vw;
+  place-items: center;
+  position: absolute;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Inknut Antiqua', serif;
+  font-weight: 400;
+  letter-spacing: 2rem;
   color: white;
 }
-.videoframe {
-  max-width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(2, 50vw);
-  min-height: 100vh;
+
+.hero-text {
+  padding-left: 5rem;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  width: 650px;
+  font-size: 2rem;
 }
 
-@media (max-width: 900px) {
 
-  .videoframe {
-    grid-template-columns: repeat(1, 100vw)
+/* @media (max-width: 900px) {
+
+  .snap-scroll-section {
+    place-items: center;
+    justify-content: left;
+    align-items: center;
   }
-}
 
-/* video {
-  width: 50vw;
 } */
-  /* .landingpage-grid {
-    display: grid;
-    justify-content: center;
-    background-color: #fff44f;
-    height: 100vh;
-    width: 100vw;
+
+  @media (max-width: 360px){
+  .scroll-snap-container {
+    scroll-snap-type: none;
+    overflow-y: auto;
   }
 
-  .hero-title {
-    font-size: 7rem;
-    margin-top: 15rem;
-    text-align: center;
-    color: #fff;
+  .snap-scroll-section {
+    scroll-snap-align: none;
   }
 
-  .byline {
-    font-size: 1.5rem;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
+  .hero-section {
+    place-items: center;
+    overflow: auto;
+    overflow-x: hidden;
   }
-
-  .select {
-    font-family: 'flood std', sans-serif;
-    font-size: 5rem;
-    color: orange;
-    display: grid;
-    gap: 5rem;
-    grid-template-columns: repeat(2, 1fr);
-  } */
-/* 
-  @media (max-width: 900px) {
-    .landingpage-grid {
-      display: grid;
-      justify-content: center;
-      height: auto;
-    }
-
-    .hero-title {
-      font-size: 3rem;
-    }
     
-    .select {
-      font-size: 3rem;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(2, 1fr);
-      align-items: center;
-    }
-  } */
-
+  }
 </style>
