@@ -44,17 +44,6 @@
   overflow: hidden;
 }
 
-
-/* @media (max-width: 900px) {
-
-  .snap-scroll-section {
-    place-items: center;
-    justify-content: left;
-    align-items: center;
-  }
-
-} */
-
   @media (max-width: 360px){
   .scroll-snap-container {
     scroll-snap-type: none;
