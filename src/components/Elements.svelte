@@ -46,6 +46,7 @@
   place-items: center;
   overflow: hidden;
 }
+
 .scroll-down-indicator {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -63,24 +64,33 @@
 .scrolldown-line {
   width: 1px;
   height: 15px;
-  background-color: white;
+  background-color: #fff;
 }
 
   @media (max-width: 360px){
-  .scroll-snap-container {
-    scroll-snap-type: none;
-    height: auto;
-  }
 
-  .snap-scroll-section {
-    scroll-snap-align: none;
-  }
+    .scroll-snap-container {
+      scroll-snap-type: none;
+      height: auto;
+    }
 
-  .hero-section {
-    place-items: center;
-    overflow: auto;
-    overflow-x: hidden;
-  }
+    .snap-scroll-section {
+      scroll-snap-align: none;
+    }
+
+    .hero-section {
+      place-items: center;
+      overflow: auto;
+      overflow-x: hidden;
+    }
+
+    .scroll-down-indicator {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      place-items: center;
+      position: absolute;
+      bottom: 20vh;
+    }
     
   }
 

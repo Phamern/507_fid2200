@@ -43,6 +43,7 @@
     }
     .logo-header {
       font-size: 1rem;
+      padding-left: 2rem;
     }
   }
 

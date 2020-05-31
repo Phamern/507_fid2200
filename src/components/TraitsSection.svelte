@@ -81,6 +81,7 @@
     font-family: 'Cormorant Garamond', serif;
     color: #fff;
     letter-spacing: .4rem;
+    font-size: 1rem;
   }
 
   .trait-item {
@@ -127,7 +128,7 @@
 
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 370px) {
 
     .element-information {
       height: auto;
@@ -139,6 +140,14 @@
       column-gap: 2rem;
       justify-content: left;
     }
+
+    .trait-item {
+      padding-left: 0;
+      width: 100%;
+      font-size: 1rem;
+      line-height: 3rem;
+    }
+
 
   }
 

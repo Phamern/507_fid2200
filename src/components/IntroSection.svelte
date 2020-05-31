@@ -41,6 +41,14 @@
     font-size: 2rem;
   }
 
+  @media (max-width: 900px){
+
+    .description {
+      padding-left: 0;
+    }
+    
+  }
+
   @media (max-width: 760px) {
     .element-information {
       padding: 3rem;
@@ -56,7 +64,6 @@
     }
 
     .description {
-      padding-left: 0;
       color: #fff;
       font-family: 'Cormorant Garamond', serif;
       width: 100%;
