@@ -50,4 +50,22 @@
 
 }
 
+@media (orientation: landscape) {
+
+  .hero-title-container {
+    justify-content: center;
+    align-items: start;
+  }
+
+  .hero-video {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+}
+
 </style>

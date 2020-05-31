@@ -94,4 +94,16 @@
     
   }
 
+  @media (orientation: landscape) {
+    .scroll-snap-container {
+      scroll-snap-type: none;
+      height: auto;
+    }
+
+    .snap-scroll-section {
+      scroll-snap-align: none;
+    }
+
+  }
+
 </style>
