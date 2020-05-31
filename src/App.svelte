@@ -8,15 +8,18 @@ import Air from './components/Air.svelte'
 import Earth from './components/Earth.svelte'
 
 export let url = '';
+
 </script>
+
 <svelte:head>
 	<!--Fonts-->
 	<link rel="stylesheet" href="https://use.typekit.net/iiy6nab.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </svelte:head>
+
 <Router url="{url}">
-		<Header />
+	<Header />
   <div>
     <Route path="/"><LandingPage /></Route>
     <Route path="fire" component="{Fire}" type='fire' />

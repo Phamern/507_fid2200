@@ -1,12 +1,12 @@
 <script>
   import { Link } from 'svelte-routing'
+  import { fly } from 'svelte/transition'
 
   let show = false
 
 </script>
 
-<nav class='fullscreen'>
-  <h1>Squeeze</h1>
+<nav transition:fly={{x: 300}} class='fullscreen'>
   <div class='links'>
     <Link on:click={!show} to="/"><p class='header-item'>Home</p></Link>
     <Link on:click={!show} to="fire"><p class='header-item'>Fire</p></Link>
@@ -18,35 +18,39 @@
 
 <style>
 
+
   nav {
-    width: 100vw;
+    width: 30vw;
     height: 100vh;
     top: 0;
+    right: 0;
     position: absolute;
     display: grid;
-    justify-content: center;
-    grid-template-rows: repeat(3, 100px);
-    background-color: #1d1d1d;
+    place-items: center;
+    background-color: #a05454;
     gap: 1rem;
   }
 
-
-  h1 {
-    font-family: 'flood-std', sans-serif;
-    color:white; 
-    font-size: 2rem;
-    margin-top: 3rem;
-  }
-
   .links {
-   display: grid;
-   justify-content: center;
+    padding: 5rem;
+    display: grid;
+    grid-template-rows: repeat(5, 4rem);
+    height: 100vh;
+    place-items: center;
   }
 
   .header-item {
-    font-size: 1.2rem;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 1.5rem;
     color: #fff;
     text-align: center;
   }
+
+  @media (max-width: 900px) {
+    nav {
+      width: 100%;
+    }
+  }
+
 
 </style>

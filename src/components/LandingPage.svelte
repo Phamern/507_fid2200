@@ -163,6 +163,10 @@ let videoLife = './video/life.mp4'
       gap: 1rem;
     }
 
+    .link-item {
+      text-decoration: underline;
+    }
+
   }
 
   @media (max-width: 360px){
