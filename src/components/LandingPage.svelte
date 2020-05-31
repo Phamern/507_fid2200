@@ -38,7 +38,6 @@ let videoLife = './video/life.mp4'
   display: grid;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 
 .front-page-section {
@@ -50,7 +49,6 @@ let videoLife = './video/life.mp4'
 
 .hero-section {
   place-items: center;
-  overflow: hidden;
 }
 
 .hero-video {

@@ -19,7 +19,6 @@
     padding-top: 15vh;
     max-width: 100vw;
     gap: 2rem;
-    overflow: hidden;
   }
 
   .title {
@@ -46,7 +45,7 @@
     .description {
       padding-left: 0;
     }
-    
+
   }
 
   @media (max-width: 760px) {

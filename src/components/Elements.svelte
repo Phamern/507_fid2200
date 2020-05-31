@@ -40,11 +40,11 @@
   width: 100vw;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-section {
   place-items: center;
-  overflow: hidden;
 }
 
 .scroll-down-indicator {
@@ -92,18 +92,6 @@
       bottom: 20vh;
     }
     
-  }
-
-  @media (orientation: landscape) {
-    .scroll-snap-container {
-      scroll-snap-type: none;
-      height: auto;
-    }
-
-    .snap-scroll-section {
-      scroll-snap-align: none;
-    }
-
   }
 
 </style>

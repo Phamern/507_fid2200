@@ -45,7 +45,6 @@
     padding-top: 10vh;
     max-width: 100vw;
     gap: 2rem;
-    overflow: hidden;
   }
 
   .title {
