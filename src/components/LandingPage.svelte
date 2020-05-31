@@ -19,6 +19,7 @@ let videoLife = './video/life.mp4'
       <div class='hero-title-container'>
         <h1 class='hero-title' in:fade={{y: 200, duration: 3000, }}>Elements</h1>
         <p class='hero-text' in:fade={{y: 200, duration: 3000, }}>The <em>Earth</em> without <em>Water</em> to moisten it, without <em>Fire</em> to warm it, and without <em>Air</em> to surround it, would be a lifeless planet.</p>
+       <div class="explore-section">
         <h2 class='subtitle'>Explore the elements</h2>
         <div class="frontpage-nav">
           <Link to='fire'><p class='link-item'>Fire</p></Link>
@@ -26,6 +27,7 @@ let videoLife = './video/life.mp4'
           <Link to='air'><p class='link-item'>Air</p></Link>
           <Link to='earth'><p class='link-item'>Earth</p></Link>
         </div>
+       </div>
       </div>
     </section>
   </main>
@@ -75,12 +77,18 @@ let videoLife = './video/life.mp4'
 }
 
 .hero-text {
-  padding-left: 5rem;
+  padding-left: 2rem;
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
-  width: 40%;
+  width: 60%;
   font-size: 2rem;
   text-shadow: 1px 1px 1px #1d1a1a;
+  text-align: center;
+}
+
+.explore-section {
+  display: grid;
+  place-items: center;
 }
 
 .subtitle {
@@ -88,6 +96,7 @@ let videoLife = './video/life.mp4'
   font-size: 2rem;
   color: #DB6969;
 }
+
 
 .frontpage-nav {
   display: grid;
@@ -108,7 +117,7 @@ let videoLife = './video/life.mp4'
   transform: scale(1.1);
 }
 
-  @media (max-width: 768px){
+  @media (max-width: 750px){
 
     .front-page-section {
       width: 100vw;
@@ -131,18 +140,28 @@ let videoLife = './video/life.mp4'
     .hero-text {
       width: 80%;
       font-size: 1.5rem;
-      padding: 1rem;
+      padding: 0;
+      text-align: left;
     }
 
     .hero-section {
       place-items: left;
     }
 
+    /* .explore-section {
+      place-items: left;
+      padding: 0;
+    } */
+
+    .subtitle {
+      font-size: 1.5rem;
+    }
+
     .frontpage-nav {
       display: grid;
-      grid-template-columns: none;
-      grid-template-rows: repeat(4, 3rem);
-      place-items: center;
+      grid-template-columns: repeat(2, 8rem);
+      grid-template-rows: repeat(2, 5rem);
+      justify-content: left; 
       width: 80%;
       gap: 1rem;
     }
