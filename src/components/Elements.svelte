@@ -1,8 +1,10 @@
 <script>
+  import { Link } from 'svelte-routing'
   import { fade } from 'svelte/transition'
   import HeroSection from './HeroSection.svelte'
   import IntroSection from './IntroSection.svelte'
   import TraitsSection from './TraitsSection.svelte'
+
   export let element;
   export let trait;
 </script>

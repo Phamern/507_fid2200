@@ -17,7 +17,7 @@ let videoLife = './video/life.mp4'
         muted
       />
       <div class='hero-title-container'>
-        <h1 class='hero-title' in:fade={{y: 200, duration: 3000, }}>Elements</h1>
+        <h1 class='hero-title' in:fade={{y: 200, duration: 3000, }}>The Elements</h1>
         <p class='hero-text' in:fade={{y: 200, duration: 3000, }}>The <em>Earth</em> without <em>Water</em> to moisten it, without <em>Fire</em> to warm it, and without <em>Air</em> to surround it, would be a lifeless planet.</p>
        <div class="explore-section">
         <h2 class='subtitle'>Explore the elements</h2>
@@ -71,7 +71,7 @@ let videoLife = './video/life.mp4'
   font-family: 'Cormorant Garamond', serif;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 400;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   color: #fff;
   text-shadow: 1px 1px 20px #1d1a1a;
 }

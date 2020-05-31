@@ -31,7 +31,7 @@ let hidden = true
 
   .hamburger-icon {
     width: 30px;
-    height: 2px;
+    height: 1px;
     background-color: #fff;
     transition: .3s ease-in-out;
   }

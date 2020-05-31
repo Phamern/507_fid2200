@@ -26,7 +26,6 @@
     right: 0;
     position: absolute;
     display: grid;
-    place-items: center;
     background-color: #843f5b;
     gap: 1rem;
   }
