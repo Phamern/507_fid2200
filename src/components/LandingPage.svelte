@@ -45,6 +45,7 @@ let videoLife = './video/life.mp4'
   min-height: 100%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-section {

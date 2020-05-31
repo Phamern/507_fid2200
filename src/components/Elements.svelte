@@ -32,6 +32,7 @@
   width: 100vw;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .snap-scroll-section {
