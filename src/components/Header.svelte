@@ -34,7 +34,6 @@
     letter-spacing: .5rem;
     font-size: 1.2rem;
     color:#fff; 
-    padding-left: 2rem;
   }
 
   @media (max-width: 900px) {

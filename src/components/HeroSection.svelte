@@ -12,7 +12,7 @@
   muted
 />
 <div class='hero-title-container'>
-  <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 500}}>{element.name}</h1>
+  <h1 class='hero-title' in:fade={{y: 200, duration: 2000, delay: 2000}}>{element.name}</h1>
 </div>
 
 <style>
@@ -34,7 +34,6 @@
   font-family: 'Cormorant Garamond', serif;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 400;
-  letter-spacing: 2rem;
   color: white;
 }
 
@@ -47,7 +46,6 @@
 
   .hero-title {
     font-size: 4rem;
-    letter-spacing: 1rem;
   }
 
 }

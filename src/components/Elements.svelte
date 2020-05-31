@@ -1,5 +1,4 @@
 <script>
-  import { Link } from 'svelte-routing'
   import { fade } from 'svelte/transition'
   import HeroSection from './HeroSection.svelte'
   import IntroSection from './IntroSection.svelte'
@@ -11,7 +10,7 @@
 
   <main class='scroll-snap-container'>
     <section class='snap-scroll-section hero-section'>
-      <div class='scroll-down-indicator'>
+      <div class='scroll-down-indicator' in:fade={{y: 200, duration: 2000, delay: 2500}}>
         <p class='scrolldown-text'>Explore the {element.name}</p>
         <div class='scrolldown-line'></div>
       </div>
@@ -49,12 +48,10 @@
 }
 .scroll-down-indicator {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   place-items: center;
   position: absolute;
-  right: 2rem;
-  bottom: 5vh;
-  transform: rotate(90deg);
+  bottom: 15vh;
 }
 
 .scrolldown-text {
@@ -64,8 +61,8 @@
 }
 
 .scrolldown-line {
-  height: 1px;
-  width: 55px;
+  width: 1px;
+  height: 15px;
   background-color: white;
 }
 
