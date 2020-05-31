@@ -1,0 +1,142 @@
+<script>
+  export let fact;
+  export let trait;
+  export let type;
+</script>
+
+ <section class='element-information'>
+    <div class='intro-text'>
+      <h2 class='title'>The <br>{fact.name} traits</h2>
+      <div class="traits-grid-container">
+        <div class='item-container'>
+          <p class='trait-label'>Direction </p>
+          <p class='trait-item'>{trait.direction}</p>
+        </div>
+        <div class='item-container'>
+          <p class='trait-label'>Energy </p>
+          <p class='trait-item'>{trait.energy}</p>
+        </div>
+        <div class='item-container'>
+          <p class='trait-label'>Colour </p>
+          <p class='trait-item'>{trait.colour}</p>
+        </div>
+        <div class='item-container'>
+          <p class='trait-label'>Season </p>
+          <p class='trait-item'>{trait.season}</p>
+        </div>
+        <div class='item-container'>
+          <p class='trait-label'>Time </p>
+          <p class='trait-item'>{trait.time}</p>
+        </div>
+        <div class='item-container'>
+          <p class='trait-label'>Sense </p>
+          <p class='trait-item'>{trait.sense}</p>
+          {#if type === 'air'}
+            <p class='trait-item'>{trait.secondsense}</p>
+          {/if}
+        </div>
+      </div>
+    </div>
+ </section>
+
+
+ <style>
+  
+  .element-information {
+    display: grid;
+    grid-template-columns:  1fr, 1fr, 30vw;
+    padding: 5rem;
+    padding-top: 10vh;
+    max-width: 100vw;
+    gap: 2rem;
+    overflow: hidden;
+  }
+
+  .title {
+    grid-column: 1 / span 2;
+    font-size: 4rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 400;
+    line-height: 7rem;
+    letter-spacing: 1rem;
+    margin: 0;
+    color: #a05454;
+  }
+
+  .traits-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 4rem;
+    row-gap: 6rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .item-container {
+    display: grid;
+    grid-template-rows: repeat(2, 3rem);
+    width: 100%;
+    place-items: center;
+    text-align: center;
+  }
+
+  .trait-label {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    letter-spacing: .5rem;
+    /* align-self: center;
+    text-align: center; */
+  }
+
+  .trait-item {
+    color: #a05454;
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 760px) {
+    .element-information {
+      padding: 3rem;
+      margin-top: 5vh;
+  }
+
+    .title {
+      font-size: 2.5rem;
+      width: 100%;
+      padding: 0;
+      letter-spacing: 1rem;
+      line-height: 3.5rem;
+    }
+    .trait-item {
+      padding-left: 0;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      width: 100%;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .element-information {
+      padding: 2rem;
+      margin-top: 2vh;
+  }
+
+    .title {
+      font-size: 2rem;
+      width: 100%;
+      padding: 0;
+      letter-spacing: 1rem;
+      line-height: 3.5rem;
+    }
+    .trait-item {
+      padding-left: 0;
+      color: #fff;
+      font-family: 'Cormorant Garamond', serif;
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
+
+ </style>

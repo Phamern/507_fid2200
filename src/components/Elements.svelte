@@ -1,9 +1,11 @@
 <script>
   import { fade } from 'svelte/transition'
-  import IntroSection from './IntroSection.svelte'
   import HeroSection from './HeroSection.svelte'
+  import IntroSection from './IntroSection.svelte'
+  import TraitsSection from './TraitsSection.svelte'
   export let fact;
-  export let cor;
+  export let trait;
+  export let type;
 </script>
 
   <main class='scroll-snap-container'>
@@ -11,7 +13,10 @@
       <HeroSection fact={fact} />
     </section>
     <section class='snap-scroll-section'>
-      <IntroSection cor={cor} fact={fact}/>
+      <IntroSection fact={fact}/>
+    </section>
+    <section class='snap-scroll-section'>
+      <TraitsSection trait={trait} fact={fact} type={type}/>
     </section>
   </main>
 

@@ -8,8 +8,8 @@
 <body>
 {#if type === 'earth'}
   {#each $Store.earth as fact}
-    {#each fact.cors as cor}
-      <Elements fact={fact} cor={cor}/>
+    {#each fact.traits as trait}
+      <Elements fact={fact} trait={trait}/>
     {/each}
   {/each}
 {/if}

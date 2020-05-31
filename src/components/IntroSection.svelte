@@ -1,5 +1,5 @@
 <script>
-export let fact;
+  export let fact;
 </script>
 
  <section class='element-information'>
