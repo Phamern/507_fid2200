@@ -25,7 +25,6 @@
   .title {
     grid-column: 1 / span 2;
     font-size: 5rem;
-    font-family: 'Cormorant Garamond', serif;
     font-family: 'Inknut Antiqua', serif;
     font-weight: 400;
     line-height: 7rem;

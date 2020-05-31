@@ -36,6 +36,7 @@ export let url = '';
 	margin: 0;
 	padding: 0;
 	font-family: 'poppins', sans-serif;
+	scroll-behavior: smooth;
 }
 
 :global(h1) {

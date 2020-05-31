@@ -17,8 +17,8 @@ let videoLife = './video/life.mp4'
         muted
       />
       <div class='hero-title-container'>
-        <h1 class='hero-title' in:fade={{y: 200, duration: 3000, }}>The <br>Elements</h1>
-        <p class='hero-text' in:fade={{y: 200, duration: 3000, }}>The <em>Earth</em> without <em>Water</em> to moisten it, without <em>Fire</em> to warm it, and without <em>Air</em> to surround it, would be a lifeless planet.</p>
+        <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 2000}}>The <br>Elements</h1>
+        <p class='hero-text' in:fade={{y: 200, duration: 3000, delay: 2000}}>The <em>Earth</em> without <em>Water</em> to moisten it, without <em>Fire</em> to warm it, and without <em>Air</em> to surround it, would be a lifeless planet.</p>
        <div class="explore-section">
         <h2 class='subtitle'>Explore the elements</h2>
         <div class="frontpage-nav">

@@ -11,9 +11,13 @@
 
   <main class='scroll-snap-container'>
     <section class='snap-scroll-section hero-section'>
+      <div class='scroll-down-indicator'>
+        <p class='scrolldown-text'>Explore the {element.name}</p>
+        <div class='scrolldown-line'></div>
+      </div>
       <HeroSection element={element} />
     </section>
-    <section class='snap-scroll-section'>
+    <section id='1' class='snap-scroll-section'>
       <IntroSection element={element}/>
     </section>
     <section class='snap-scroll-section'>
@@ -42,6 +46,27 @@
 .hero-section {
   place-items: center;
   overflow: hidden;
+}
+.scroll-down-indicator {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 5vh;
+  transform: rotate(90deg);
+}
+
+.scrolldown-text {
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 100;
+}
+
+.scrolldown-line {
+  height: 1px;
+  width: 55px;
+  background-color: white;
 }
 
   @media (max-width: 360px){
