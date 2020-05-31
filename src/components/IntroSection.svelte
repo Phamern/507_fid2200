@@ -40,6 +40,12 @@
     font-size: 2rem;
   }
 
+  @media (min-width: 1400px) {
+    .element-information {
+      place-items: center;
+    }
+  }
+
   @media (max-width: 900px){
 
     .description {
