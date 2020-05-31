@@ -22,7 +22,7 @@ const store = writable({
       name: "Air",
       video: "./video/air.mp4",
       description: 'The element of Air is vital to human survival, without it we would all perish, its aspects are Thinness, Motion and Darkness and its quality is Active. Air is the manifestation of movement, freshness, communication and of the intelligence. Sound is another manifestation of this element. As an element, it is invisible, but its reality can be felt in the air that we breathe in every day.',
-      traits: [{direction: 'East', energy: 'Projective', colour: 'Yellow', season: 'Spring', time: 'Dawn', sense: 'Hearing', secondsense: 'Smell'}]
+      traits: [{direction: 'East', energy: 'Projective', colour: 'Yellow', season: 'Spring', time: 'Dawn', sense: 'Hearing & smell'}]
     },
   ],
   earth: [

@@ -7,9 +7,9 @@
 </script>
 <body in:fade={{y: 200, duration: 500}}>
   {#if type === 'air'}
-    {#each $Store.air as fact}
-      {#each fact.traits as trait}
-        <Elements fact={fact} trait={trait} type={type}/>
+    {#each $Store.air as element}
+      {#each element.traits as trait}
+        <Elements element={element} trait={trait} type={type}/>
       {/each}
     {/each}
   {/if}

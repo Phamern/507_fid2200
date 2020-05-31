@@ -7,9 +7,9 @@
 
 <body>
 {#if type === 'earth'}
-  {#each $Store.earth as fact}
-    {#each fact.traits as trait}
-      <Elements fact={fact} trait={trait}/>
+  {#each $Store.earth as element}
+    {#each element.traits as trait}
+      <Elements element={element} trait={trait}/>
     {/each}
   {/each}
 {/if}

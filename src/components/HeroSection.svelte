@@ -1,18 +1,18 @@
 <script>
   import { fade } from 'svelte/transition'
-  export let fact;
+  export let element;
 </script>
 
 <video
   class='hero-video'
-  src={fact.video}
+  src={element.video}
   playsinline
   autoplay
   loop 
   muted
 />
 <div class='hero-title-container'>
-  <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 500}}>{fact.name}</h1>
+  <h1 class='hero-title' in:fade={{y: 200, duration: 3000, delay: 500}}>{element.name}</h1>
 </div>
 
 <style>

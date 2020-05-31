@@ -8,9 +8,9 @@
 
 <body in:fade={{y: 200, duration: 500}}>
   {#if type === 'water'}
-    {#each $Store.water as fact}
-      {#each fact.traits as trait}
-        <Elements fact={fact} trait={trait}/>
+    {#each $Store.water as element}
+      {#each element.traits as trait}
+        <Elements element={element} trait={trait}/>
       {/each}
     {/each}
   {/if}

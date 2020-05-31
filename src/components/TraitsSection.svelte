@@ -1,12 +1,11 @@
 <script>
-  export let fact;
+  export let element;
   export let trait;
-  export let type;
 </script>
 
  <section class='element-information'>
     <div class='intro-text'>
-      <h2 class='title'>The <br>{fact.name} traits</h2>
+      <h2 class='title'>The <br>{element.name} traits</h2>
       <div class="traits-grid-container">
         <div class='item-container'>
           <p class='trait-label'>Direction </p>
@@ -31,9 +30,6 @@
         <div class='item-container'>
           <p class='trait-label'>Sense </p>
           <p class='trait-item'>{trait.sense}</p>
-          {#if type === 'air'}
-            <p class='trait-item'>{trait.secondsense}</p>
-          {/if}
         </div>
       </div>
     </div>
@@ -77,29 +73,29 @@
     display: grid;
     grid-template-rows: repeat(2, 3rem);
     width: 100%;
-    place-items: center;
+    justify-content: center;
     text-align: center;
   }
 
   .trait-label {
     font-family: 'Cormorant Garamond', serif;
     color: #fff;
-    letter-spacing: .5rem;
-    /* align-self: center;
-    text-align: center; */
+    letter-spacing: .4rem;
   }
 
   .trait-item {
     color: #a05454;
     font-family: 'Inknut Antiqua', serif;
     font-size: 2rem;
+    line-height: 3rem;
+    margin: 0;
   }
 
   @media (max-width: 760px) {
     .element-information {
       padding: 3rem;
       margin-top: 5vh;
-  }
+    }
 
     .title {
       font-size: 2.5rem;
@@ -108,10 +104,9 @@
       letter-spacing: 1rem;
       line-height: 3.5rem;
     }
+
     .trait-item {
       padding-left: 0;
-      color: #fff;
-      font-family: 'Cormorant Garamond', serif;
       width: 100%;
       font-size: 1.5rem;
     }
@@ -121,7 +116,7 @@
     .element-information {
       padding: 2rem;
       margin-top: 2vh;
-  }
+    }
 
     .title {
       font-size: 2rem;
@@ -130,6 +125,7 @@
       letter-spacing: 1rem;
       line-height: 3.5rem;
     }
+
     .trait-item {
       padding-left: 0;
       color: #fff;

@@ -1,15 +1,14 @@
 <script>
 import { Link, Route } from 'svelte-routing'
 import Header from './Header.svelte'
-import Fire from './Fire.svelte'
-import {fade} from 'svelte/transition'
+import { fade } from 'svelte/transition'
 
 let videoLife = './video/life.mp4'
 
 </script>
 
-  <main class='scroll-snap-container'>
-    <section class='snap-scroll-section hero-section'>
+  <main class='front-page-container'>
+    <section class='front-page-section hero-section'>
       <video
         class='hero-video'
         src={videoLife}
@@ -20,25 +19,30 @@ let videoLife = './video/life.mp4'
       <div class='hero-title-container'>
         <h1 class='hero-title' in:fade={{y: 200, duration: 3000, }}>Elements</h1>
         <p class='hero-text' in:fade={{y: 200, duration: 3000, }}>The <em>Earth</em> without <em>Water</em> to moisten it, without <em>Fire</em> to warm it, and without <em>Air</em> to surround it, would be a lifeless planet.</p>
+        <h2 class='subtitle'>Explore the elements</h2>
+        <div class="frontpage-nav">
+          <Link to='fire'><p class='link-item'>Fire</p></Link>
+          <Link to='water'><p class='link-item'>Water</p></Link>
+          <Link to='air'><p class='link-item'>Air</p></Link>
+          <Link to='earth'><p class='link-item'>Earth</p></Link>
+        </div>
       </div>
     </section>
   </main>
 
 <style>
 
-.scroll-snap-container {
+.front-page-container {
   display: grid;
   height: 100vh;
   width: 100vw;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
-.snap-scroll-section {
+.front-page-section {
   display: grid;
-  min-height: 100vh;
-  width: 100vw;
-  scroll-snap-align: start;
+  min-height: 100%;
+  width: 100%;
   position: relative;
 }
 
@@ -74,36 +78,88 @@ let videoLife = './video/life.mp4'
   padding-left: 5rem;
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
-  width: 650px;
+  width: 40%;
   font-size: 2rem;
   text-shadow: 1px 1px 1px #1d1a1a;
 }
 
+.subtitle {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 2rem;
+  color: #DB6969;
+}
 
-/* @media (max-width: 900px) {
+.frontpage-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  width: 30%;
+  gap: 2rem;
+}
 
-  .snap-scroll-section {
-    place-items: center;
-    justify-content: left;
-    align-items: center;
+.link-item {
+  font-size: 2rem;
+  transition: .2s;
+}
+
+.link-item:hover {
+  text-decoration: underline;
+  font-weight: 900;
+  transform: scale(1.1);
+}
+
+  @media (max-width: 768px){
+
+    .front-page-section {
+      width: 100vw;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+      letter-spacing: 1rem;
+    }
+
+    .hero-title-container {
+      display: grid;
+      width: 100vw;
+      justify-items: start;
+      position: absolute;
+    }
+
+    .hero-text {
+      width: 80%;
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+
+    .hero-section {
+      place-items: left;
+    }
+
+    .frontpage-nav {
+      display: grid;
+      grid-template-columns: none;
+      grid-template-rows: repeat(4, 3rem);
+      place-items: center;
+      width: 80%;
+      gap: 1rem;
+    }
   }
 
-} */
-
   @media (max-width: 360px){
-  .scroll-snap-container {
+  .front-page-container {
     scroll-snap-type: none;
     overflow-y: auto;
   }
 
-  .snap-scroll-section {
+  .front-page-section {
     scroll-snap-align: none;
   }
 
   .hero-section {
     place-items: center;
-    overflow: auto;
-    overflow-x: hidden;
   }
     
   }

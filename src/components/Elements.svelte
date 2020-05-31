@@ -3,20 +3,19 @@
   import HeroSection from './HeroSection.svelte'
   import IntroSection from './IntroSection.svelte'
   import TraitsSection from './TraitsSection.svelte'
-  export let fact;
+  export let element;
   export let trait;
-  export let type;
 </script>
 
   <main class='scroll-snap-container'>
     <section class='snap-scroll-section hero-section'>
-      <HeroSection fact={fact} />
+      <HeroSection element={element} />
     </section>
     <section class='snap-scroll-section'>
-      <IntroSection fact={fact}/>
+      <IntroSection element={element}/>
     </section>
     <section class='snap-scroll-section'>
-      <TraitsSection trait={trait} fact={fact} type={type}/>
+      <TraitsSection trait={trait} element={element}/>
     </section>
   </main>
 

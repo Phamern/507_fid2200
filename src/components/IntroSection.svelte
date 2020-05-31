@@ -1,11 +1,11 @@
 <script>
-  export let fact;
+  export let element;
 </script>
 
  <section class='element-information'>
     <div class='intro-text'>
-      <h2 class='title'>The <br>{fact.name} Element</h2>
-      <p class='description'>{fact.description}</p>
+      <h2 class='title'>The <br>{element.name} Element</h2>
+      <p class='description'>{element.description}</p>
     </div>
  </section>
 
