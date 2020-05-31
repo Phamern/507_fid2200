@@ -148,38 +148,47 @@ let videoLife = './video/life.mp4'
       place-items: left;
     }
 
-    /* .explore-section {
-      place-items: left;
-      padding: 0;
-    } */
-
     .subtitle {
       font-size: 1.5rem;
+      margin: 0;
+      padding: 0;
     }
 
     .frontpage-nav {
       display: grid;
       grid-template-columns: repeat(2, 8rem);
-      grid-template-rows: repeat(2, 5rem);
+      grid-template-rows: repeat(2, 4rem);
       justify-content: left; 
       width: 80%;
       gap: 1rem;
     }
+
   }
 
   @media (max-width: 360px){
-  .front-page-container {
-    scroll-snap-type: none;
-    overflow-y: auto;
-  }
+    .front-page-container {
+      scroll-snap-type: none;
+      overflow-y: auto;
+    }
 
-  .front-page-section {
-    scroll-snap-align: none;
-  }
+    .front-page-section {
+      scroll-snap-align: none;
+    }
 
-  .hero-section {
-    place-items: center;
-  }
+    .hero-section {
+      place-items: center;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+    }
     
+    .link-item {
+      font-size: 1.5rem;
+    }
   }
 </style>

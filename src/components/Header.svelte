@@ -45,9 +45,10 @@
 
   h1 {
     font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 1rem;
+    letter-spacing: .5rem;
     font-size: 1.2rem;
     color:#fff; 
+    padding-left: 2rem;
   }
 
   .header-mid-items {

@@ -97,6 +97,18 @@
       margin-top: 5vh;
     }
 
+    .traits-grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 3rem;
+      column-gap: 2rem;
+      justify-content: left;
+    }
+
+    .item-container {
+      justify-content: left;
+      text-align: left;
+    }
+
     .title {
       font-size: 2.5rem;
       width: 100%;
@@ -108,30 +120,20 @@
     .trait-item {
       padding-left: 0;
       width: 100%;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 375px) {
     .element-information {
-      padding: 2rem;
-      margin-top: 2vh;
+      height: auto;
     }
 
-    .title {
-      font-size: 2rem;
-      width: 100%;
-      padding: 0;
-      letter-spacing: 1rem;
-      line-height: 3.5rem;
-    }
-
-    .trait-item {
-      padding-left: 0;
-      color: #fff;
-      font-family: 'Cormorant Garamond', serif;
-      width: 100%;
-      font-size: 1rem;
+     .traits-grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1rem;
+      column-gap: 2rem;
+      justify-content: left;
     }
   }
 

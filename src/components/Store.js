@@ -13,7 +13,7 @@ const store = writable({
     {
       name: "Water",
       video: "./video/water.mp4",
-      description: 'Water, is a great necessity, without it nothing can live. Only earth and water can bring forth a living soul. Such is the greatness of water that spiritual regeneration cannot be done without it.',
+      description: 'Water, is a great necessity, without it nothing can live. Only earth and water can bring forth a living soul. Such is the greatness of water that spiritual regeneration cannot be done without it. As well as being vital for life, within the energy of this element is contained the essence of love. Love is the underlying reason for all magic. Water is love.',
       traits: [{direction: 'West', energy: 'Receptive', colour: 'Blue', season: 'Autumn', time: 'Dusk', sense: 'Taste'}]
     },
   ],

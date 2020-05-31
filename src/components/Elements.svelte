@@ -56,7 +56,7 @@
   @media (max-width: 360px){
   .scroll-snap-container {
     scroll-snap-type: none;
-    overflow-y: auto;
+    height: auto;
   }
 
   .snap-scroll-section {
