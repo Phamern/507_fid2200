@@ -94,7 +94,7 @@ let videoLife = './video/life.mp4'
 .subtitle {
   font-family: 'Inknut Antiqua', serif;
   font-size: 2rem;
-  color: #DB6969;
+  color: #843f5b;
 }
 
 

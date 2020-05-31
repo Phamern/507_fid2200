@@ -57,7 +57,7 @@
     line-height: 7rem;
     letter-spacing: 1rem;
     margin: 0;
-    color: #a05454;
+    color: #843f5b;
   }
 
   .traits-grid-container {
@@ -84,7 +84,7 @@
   }
 
   .trait-item {
-    color: #a05454;
+    color: #843f5b;
     font-family: 'Inknut Antiqua', serif;
     font-size: 2rem;
     line-height: 3rem;
@@ -92,6 +92,7 @@
   }
 
   @media (max-width: 760px) {
+    
     .element-information {
       padding: 3rem;
       margin-top: 5vh;
@@ -105,12 +106,13 @@
     }
 
     .item-container {
+      grid-template-rows: repeat(2, 2rem);
       justify-content: left;
       text-align: left;
     }
 
     .title {
-      font-size: 2.5rem;
+      font-size: 2rem;
       width: 100%;
       padding: 0;
       letter-spacing: 1rem;
@@ -122,19 +124,22 @@
       width: 100%;
       font-size: 1.3rem;
     }
+
   }
 
   @media (max-width: 375px) {
+
     .element-information {
       height: auto;
     }
 
-     .traits-grid-container {
+    .traits-grid-container {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 1rem;
       column-gap: 2rem;
       justify-content: left;
     }
+
   }
 
  </style>

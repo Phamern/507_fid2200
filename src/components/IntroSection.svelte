@@ -29,9 +29,8 @@
     font-family: 'Inknut Antiqua', serif;
     font-weight: 400;
     line-height: 7rem;
-    letter-spacing: 1rem;
     margin: 0;
-    color: #a05454;
+    color: #843f5b;
   }
 
   .description {
@@ -47,7 +46,7 @@
     .element-information {
       padding: 3rem;
       margin-top: 5vh;
-  }
+    }
 
     .title {
       font-size: 2.5rem;
@@ -56,6 +55,7 @@
       letter-spacing: 1rem;
       line-height: 3.5rem;
     }
+
     .description {
       padding-left: 0;
       color: #fff;
@@ -63,13 +63,15 @@
       width: 100%;
       font-size: 1.5rem;
     }
+
   }
 
   @media (max-width: 360px) {
+
     .element-information {
       padding: 2rem;
       margin-top: 2vh;
-  }
+    }
 
     .title {
       font-size: 2rem;
@@ -78,6 +80,7 @@
       letter-spacing: 1rem;
       line-height: 3.5rem;
     }
+
     .description {
       padding-left: 0;
       color: #fff;
@@ -85,6 +88,7 @@
       width: 100%;
       font-size: 1rem;
     }
+    
   }
 
  </style>

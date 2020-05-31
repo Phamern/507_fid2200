@@ -27,12 +27,12 @@
     position: absolute;
     display: grid;
     place-items: center;
-    background-color: #a05454;
+    background-color: #843f5b;
     gap: 1rem;
   }
 
   .links {
-    padding: 5rem;
+    padding-top: 15rem;
     display: grid;
     grid-template-rows: repeat(5, 4rem);
     height: 100vh;
