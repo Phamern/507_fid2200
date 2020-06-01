@@ -107,6 +107,7 @@ let heroVideo = './video/life.mp4'
 .link-item {
   font-size: 2rem;
   transition: .2s;
+  text-align: center;
 }
 
 .link-item:hover {
@@ -152,7 +153,7 @@ let heroVideo = './video/life.mp4'
   .frontpage-nav {
     grid-template-columns: repeat(2, 8rem);
     grid-template-rows: repeat(2, 4rem);
-    justify-content: left; 
+    justify-content: center; 
     width: 80%;
     gap: 1rem;
   }
