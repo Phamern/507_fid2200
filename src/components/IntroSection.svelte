@@ -41,9 +41,11 @@
   }
 
   @media (min-width: 1400px) {
+
     .element-information {
       place-items: center;
     }
+
   }
 
   @media (max-width: 900px){
@@ -55,6 +57,7 @@
   }
 
   @media (max-width: 760px) {
+    
     .element-information {
       padding: 3rem;
       margin-top: 5vh;

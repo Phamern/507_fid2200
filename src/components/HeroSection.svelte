@@ -40,7 +40,6 @@
 @media (max-width: 900px) {
 
   .hero-video {
-    min-width: 100%;
     height: 100%;
   }
 

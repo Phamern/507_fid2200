@@ -6,7 +6,8 @@
 
   let show = false
 
-  const showBurger = () => {
+  //Settes for å definere om side navigasjonen skal vises eller ikke
+  const showNav = () => {
     show = !show
   }
 
@@ -14,7 +15,7 @@
 
 <header>
   <Link to="/"><p class='logo-header'>elements</p></Link>
-  <BurgerIcon show={show} showBurger={showBurger}/>
+  <BurgerIcon show={show} showNav={showNav}/>
 </header>
 
 <style>
@@ -41,10 +42,12 @@
     header {
       justify-content: left;
     }
+
     .logo-header {
       font-size: 1rem;
       padding-left: 2rem;
     }
+    
   }
 
 </style>

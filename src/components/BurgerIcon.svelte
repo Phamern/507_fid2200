@@ -1,14 +1,14 @@
 
 <script>
 import BurgerMenu from './BurgerMenu.svelte'
-export let showBurger;
+export let showNav;
 export let show;
 
 let hidden = true
 
 </script>
 
-  <div class='hamburger' on:click={showBurger}>
+  <div class='hamburger' on:click={showNav}>
     <div class='hamburger-icon' class:active={show}></div>
     <div class='hamburger-icon' class:active={show}></div>
     <div class='hamburger-icon' class:active={show}></div>

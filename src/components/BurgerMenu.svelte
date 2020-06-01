@@ -20,7 +20,6 @@
 
 <style>
 
-
   .side-nav {
     width: 30vw;
     height: 100vh;

@@ -3,7 +3,7 @@ import { Link, Route } from 'svelte-routing'
 import Header from './Header.svelte'
 import { fade } from 'svelte/transition'
 
-let videoLife = './video/life.mp4'
+let heroVideo = './video/life.mp4'
 
 </script>
 
@@ -11,7 +11,7 @@ let videoLife = './video/life.mp4'
     <section class='front-page-section hero-section'>
       <video
         class='hero-video'
-        src={videoLife}
+        src={heroVideo}
         playsinline
         autoplay
         muted
@@ -55,7 +55,7 @@ let videoLife = './video/life.mp4'
 .hero-video {
   min-width: 100%;
   min-height: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .hero-title-container {
@@ -67,18 +67,15 @@ let videoLife = './video/life.mp4'
 
 .hero-title {
   font-size: 5rem;
-  font-family: 'Cormorant Garamond', serif;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 400;
   letter-spacing: 1rem;
   line-height: 7rem;
-  margin: 0;
   color: #fff;
   text-shadow: 1px 1px 20px #1d1a1a;
 }
 
 .hero-text {
-  padding-left: 2rem;
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
   width: 60%;
@@ -118,85 +115,80 @@ let videoLife = './video/life.mp4'
   transform: scale(1.1);
 }
 
-  @media (max-width: 750px){
+@media (max-width: 750px){
 
-    .front-page-section {
-      width: 100vw;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    .hero-title-container {
-      display: grid;
-      width: 100vw;
-      justify-items: start;
-      position: absolute;
-    }
-
-    .hero-title {
-      font-size: 1.5rem;
-      letter-spacing: 1rem;
-      line-height: 3rem;
-    }
-
-
-    .hero-text {
-      width: 80%;
-      font-size: 1.3rem;
-      padding: 0;
-      text-align: left;
-    }
-
-    .hero-section {
-      place-items: left;
-    }
-
-    .subtitle {
-      font-size: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    .frontpage-nav {
-      display: grid;
-      grid-template-columns: repeat(2, 8rem);
-      grid-template-rows: repeat(2, 4rem);
-      justify-content: left; 
-      width: 80%;
-      gap: 1rem;
-    }
-
-    .link-item {
-      font-size: 1.5rem;
-      text-decoration: underline;
-    }
-
+  .front-page-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  @media (max-width: 360px) {
-    .front-page-container {
-      scroll-snap-type: none;
-    }
-
-    .front-page-section {
-      scroll-snap-align: none;
-    }
-
-    .hero-section {
-      place-items: center;
-    }
-
-    .hero-title {
-      font-size: 1rem;
-      line-height: 2rem;
-    }
-
-    .hero-text {
-      font-size: 1rem;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-    }
+  .hero-section {
+    place-items: left;
   }
+
+  .hero-title-container {
+    justify-items: start;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    line-height: 3rem;
+  }
+
+  .hero-text {
+    width: 80%;
+    font-size: 1.3rem;
+    padding: 0;
+    text-align: left;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .frontpage-nav {
+    grid-template-columns: repeat(2, 8rem);
+    grid-template-rows: repeat(2, 4rem);
+    justify-content: left; 
+    width: 80%;
+    gap: 1rem;
+  }
+
+  .link-item {
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+}
+
+@media (max-width: 360px) {
+  .front-page-container {
+    scroll-snap-type: none;
+  }
+
+  .front-page-section {
+    scroll-snap-align: none;
+  }
+
+  .hero-section {
+    place-items: center;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+  
 </style>
