@@ -1,5 +1,5 @@
 <script>
-  import Store from './Store.js'
+  import Store from '../data/Store.js'
   import Elements from './Elements.svelte'
   import { fade } from 'svelte/transition'
 
