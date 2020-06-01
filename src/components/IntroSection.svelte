@@ -28,9 +28,7 @@
     font-weight: 400;
     line-height: 7rem;
     margin: 0;
-    color: #5b3256;
     color: #843f5b;
-    color: black;
   }
 
   .description {
