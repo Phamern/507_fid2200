@@ -95,7 +95,6 @@ let heroVideo = './video/life.mp4'
   color: #843f5b;
 }
 
-
 .frontpage-nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -153,7 +152,6 @@ let heroVideo = './video/life.mp4'
   .frontpage-nav {
     grid-template-columns: repeat(2, 8rem);
     grid-template-rows: repeat(2, 4rem);
-    justify-content: center; 
     width: 80%;
     gap: 1rem;
   }
