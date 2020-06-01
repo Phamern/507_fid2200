@@ -31,7 +31,6 @@
 
 .hero-title {
   font-size: 5rem;
-  font-family: 'Cormorant Garamond', serif;
   font-family: 'Inknut Antiqua', serif;
   font-weight: 400;
   color: white;
@@ -40,7 +39,7 @@
 @media (max-width: 900px) {
 
   .hero-video {
-    height: 100%;
+    height: 100vh;
   }
 
   .hero-title {

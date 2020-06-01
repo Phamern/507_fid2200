@@ -10,11 +10,11 @@
 
   <main class='scroll-snap-container'>
     <section class='snap-scroll-section hero-section'>
+      <HeroSection element={element} />
       <div class='scroll-down-indicator' in:fade={{y: 200, duration: 2000, delay: 2500}}>
         <p class='scrolldown-text'>Explore the {element.name}</p>
         <div class='scrolldown-line'></div>
       </div>
-      <HeroSection element={element} />
     </section>
     <section class='snap-scroll-section'>
       <IntroSection element={element}/>
