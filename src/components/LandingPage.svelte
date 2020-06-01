@@ -161,6 +161,7 @@ let heroVideo = './video/life.mp4'
     font-size: 1.5rem;
     text-decoration: underline;
     text-align: left;
+    text-shadow: 1px 1px 3px #1d1a1a;
   }
 
 }
