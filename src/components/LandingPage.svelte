@@ -38,6 +38,7 @@ let videoLife = './video/life.mp4'
   display: grid;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .front-page-section {
@@ -45,7 +46,6 @@ let videoLife = './video/life.mp4'
   min-height: 100%;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .hero-section {
@@ -126,12 +126,6 @@ let videoLife = './video/life.mp4'
       padding-right: 2rem;
     }
 
-    .hero-title {
-      font-size: 2rem;
-      letter-spacing: 1rem;
-      line-height: 3rem;
-    }
-
     .hero-title-container {
       display: grid;
       width: 100vw;
@@ -139,9 +133,16 @@ let videoLife = './video/life.mp4'
       position: absolute;
     }
 
+    .hero-title {
+      font-size: 1.5rem;
+      letter-spacing: 1rem;
+      line-height: 3rem;
+    }
+
+
     .hero-text {
       width: 80%;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       padding: 0;
       text-align: left;
     }
@@ -166,15 +167,15 @@ let videoLife = './video/life.mp4'
     }
 
     .link-item {
+      font-size: 1.5rem;
       text-decoration: underline;
     }
 
   }
 
-  @media (max-width: 360px){
+  @media (max-width: 360px) {
     .front-page-container {
       scroll-snap-type: none;
-      overflow-y: auto;
     }
 
     .front-page-section {
@@ -186,7 +187,7 @@ let videoLife = './video/life.mp4'
     }
 
     .hero-title {
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 2rem;
     }
 
@@ -195,11 +196,7 @@ let videoLife = './video/life.mp4'
     }
 
     .subtitle {
-      font-size: 1.2rem;
-    }
-    
-    .link-item {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 </style>
