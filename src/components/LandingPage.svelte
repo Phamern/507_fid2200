@@ -150,15 +150,17 @@ let heroVideo = './video/life.mp4'
   }
 
   .frontpage-nav {
-    grid-template-columns: repeat(2, 8rem);
-    grid-template-rows: repeat(2, 4rem);
-    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: left;
+    width: 100%;
     gap: 1rem;
   }
 
   .link-item {
     font-size: 1.5rem;
     text-decoration: underline;
+    text-align: left;
   }
 
 }
