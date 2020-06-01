@@ -37,7 +37,7 @@
 
 .snap-scroll-section {
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   position: relative;
